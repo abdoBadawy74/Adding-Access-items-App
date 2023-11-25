@@ -1,0 +1,35 @@
+body {
+  background-color: #f3f3f3;
+  font-family: monospace;
+}
+.container {
+  width: 900px;
+  margin: auto;
+  background-color: #fff;
+  padding: 15px;
+}
+h1 {
+  font-size: 50px;
+}
+button {
+  background-color: #080;
+  border: none;
+  color: #fff;
+  padding: 15px;
+  font-size: 20px;
+  width: 200px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+}
+button:hover {
+  transition: 0.3s;
+  background-color: #020;
+}
+li {
+  font-size: 18px;
+  list-style: none;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
