@@ -6,12 +6,21 @@ let btn = document.getElementById("button");
 
 let li = document.querySelectorAll("ul li");
 
-for (let i = 0; i < li.length; i++) {
-  li[i].addEventListener("click", active);
-}
+list.addEventListener("click", active);
 
-function active() {
-  heading.innerHTML = this.innerHTML;
+function active(e) {
+  if (e.target.nodeName == "LI") {
+
+    heading.innerHTML = e.target.innerHTML;
+
+    for (let i = 0; i < e.target.parentNode.children.length; i++) {
+
+      e.target.parentNode.children[i].classList.remove("active");
+
+    }
+
+    e.target.classList.add("active");
+  }
 }
 
 btn.addEventListener("click", add);
@@ -19,6 +28,7 @@ btn.addEventListener("click", add);
 let counter = 1;
 
 function add() {
-  list.innerHTML += `<li>New ${counter}</li>`;
+  list.innerHTML += 
+  `<li>New Item ${counter}</li>`;
   counter++;
 }

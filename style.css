@@ -33,3 +33,7 @@ li {
   text-transform: capitalize;
   cursor: pointer;
 }
+.active{
+    background-color: #000;
+    color: #fff;
+}
